@@ -14,6 +14,7 @@
     //
     function onDeviceReady() {
         // specify contact search criteria
+       alert("App Started");
          var options = new ContactFindOptions();
         options.filter="";
         options.multiple=true;
@@ -29,6 +30,8 @@ navigator.contacts.find(fields, onSuccess, onError, options);
     // onSuccess: Get a snapshot of the current contacts
     //
     function onSuccess(contacts) {
+     alert("on Success");
+ alert("contacts length" +contacts.length);
         for (var i=0; i<contacts.length; i++) {
             if(i==2)
               break;
